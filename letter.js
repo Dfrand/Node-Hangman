@@ -1,46 +1,24 @@
 
-// Letter Consrtuctor
-var Letter = function(word, correctGuesses) {
-    this.displayWord = word;
-    this.correctLetter = correctGuesses;
-    this.display = '';
-    this.winner = false;
+// Letter constructor
+var Letter = function(ltr) {
+    this.letter = ltr;
+    this.guessedLtr = false;
 
-// function to diplay letter or '_'
-    this.showWord = function() {
-
-        var show = '';
-
-        if (this.correctLetter == undefined) {
-
-            for (var i = 0; i < this.displayWord.length; i++) {
-                show += ' _ ';
-            }
-
-        } else {
-            for (var i = 0; i < this.displayWord.length; i++) {
-
-                var displayLetter = false;
-
-                for (var j = 0; j < this.correctLetter.length; j++) {
-
-                    if (this.displayWord[i] == this.correctLetter[j]) {
-                        show += this.correctLetter[j];
-                        displayLetter = true;
-                    }
-                }
-                if (!displayLetter) {
-                    show += ' _ ';
-                }
-            }
+    this.displayLtr = function() {
+        if(this.letter == ' '){
+            this.guessedLtr = true;
+            return '  ';
+        } else if(this.guessedLtr === false){
+            return ' _ ';
+        } else{
+            return this.letter;
         }
-        this.display = show.trim();
-        console.log(this.display);
-
-        if (this.display == this.displayWord) {
-            this.winner = true;
-        }
-    }
+    };
 };
+
+
+var test = new Letter("Priscilla");
+test.displayLtr();
+console.log(test);
 
 module.exports = Letter;
