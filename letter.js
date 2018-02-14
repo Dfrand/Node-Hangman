@@ -1,11 +1,10 @@
-
 // Letter constructor
-var Letter = function(ltr) {
+var Letter = function (ltr) {
     this.letter = ltr;
     this.guessedLtr = false;
 
     this.displayLtr = function() {
-        if(this.letter == ' '){
+        if (this.letter == ' ') {
             this.guessedLtr = true;
             return '  ';
         } else if(this.guessedLtr === false){
@@ -16,9 +15,5 @@ var Letter = function(ltr) {
     };
 };
 
-
-var test = new Letter("Priscilla");
-test.displayLtr();
-console.log(test);
 
 module.exports = Letter;
