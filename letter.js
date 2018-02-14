@@ -15,5 +15,4 @@ var Letter = function (ltr) {
     };
 };
 
-
 module.exports = Letter;

@@ -30,8 +30,8 @@ function Word(wrd) {
                 lttr.guessedLtr = true;
                 returns++;
             }
-        })
-        return returns
+        });
+        return returns;
     };
 
     this.renderWord = function() {
@@ -40,7 +40,7 @@ function Word(wrd) {
         this.letters.forEach(function(lttr) {
             var currentLetter = lttr.displayLtr();
             display += currentLetter;
-        })
+        });
         return display;
     };
 }
