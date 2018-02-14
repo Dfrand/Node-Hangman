@@ -10,10 +10,10 @@ ___
 ___
 ##  Installs
 
-### Inquirer
+#### Inquirer
 - `npm install inquirer`
 
-### Is-letter
+#### Is-letter
 - `npm install is-letter`
 ___
 ## Author
